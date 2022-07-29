@@ -16,3 +16,23 @@ In the upcoming lecture, we will be installing our dependencies for the containe
 Working versions can be installed by running the following instead:
 
 `npm install webpack@5.68.0 webpack-cli@4.10.0 webpack-dev-server@4.7.4 html-webpack-plugin@5.5.0 nodemon`
+
+## See `ModuleFederationPlugin` for export and implement module
+
+### Singleton for share module:
+```
+    // ecomm-boilerplate\products\webpack.config.js
+    new ModuleFederationPlugin({
+      name: 'products',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './ProductsIndex': './src/index',
+      },
+      shared: {
+        faker: {
+            singleton: true,
+        },
+      },
+    }),
+
+```
