@@ -4,14 +4,14 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
   mode: 'development',
   devServer: {
-    port: 8082,
+    port: 8081,
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'cart',
+      name: 'products',
       filename: 'remoteEntry.js',
       exposes: {
-        './CartShow': './src/index',
+        './ProductsIndex': './src/bootstrap',
       },
       shared: ['faker'],
     }),

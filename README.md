@@ -1,6 +1,10 @@
 # Micro Frontends Application
 Micro frontend advanced with ReactJS and Config CI CD plus AWS configuration - Config Amazon Web Services
 
+# Micro React & vue project
+
+
+# Micro js project
 ### Important Versions Update / Boilerplate for `./ecomm-boilerplate/products`
 In the upcoming lecture, we will be installing our dependencies. Some of the versions used in the course lectures have since broken.
 
