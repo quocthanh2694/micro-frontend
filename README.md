@@ -124,3 +124,10 @@ Working versions can be installed by running the following instead:
 8. Update automatically clear cache and update app in aws: Go to yml and add linne: `      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/container/latest/index.html"`
 9. Go to github and add new secret: `AWS_DISTRIBUTION_ID` with value in the `cloudfront distribution > [ID]`
 10. Push to github and wait for deploy and test again. You can see invalidation detail on cloudfront -> invalidation
+
+### Config Dynamic production domain after build from github to call in `packages\container\config\webpack.prod.js`
+1. Find Cloudfront Distribution > [Your CDN name]
+2. General -> Domain Name -> Copy it.
+3. Add `PRODUCTION_DOMAIN` to secrets of GitHub (make sure add https to the link: htts://....)
+
+### Summary: 77. AWS Setup and Configuration Cheetsheet.
